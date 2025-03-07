@@ -10,7 +10,7 @@ reservations = {}
 def book_reservation():
     # Get data from request
     data = request.get_json()
-    app.logger.info("[POST REQUEST]: \n",data)
+    print("[POST REQUEST]: \n",data, flush=True)
     
     # Check if all required fields are present
     if not all(key in data for key in ['name', 'time']):
